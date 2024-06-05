@@ -115,7 +115,7 @@ public class HolaMundo {
 
  */
 
-        char miVariableChar = 'a';
+       /* char miVariableChar = 'a';
         System.out.println("miVariableChar :" + miVariableChar) ;
 
         char varCaracter = '\u0024';
@@ -125,6 +125,96 @@ public class HolaMundo {
 
 
 
+        System.out.println("La bandera es verde");
+    } else {
+        System.out.println("La bandera es roja");
+    }
+
+
+    //Ejercicio ¿Es mayor de edad?
+
+      /*  var edad = 30;
+
+       var adulto = edad >= 18;
+       if(adulto) {
+           System.out.println("Eres mayor de edad");
+       }
+       else{
+           System.out.println("Eres menor de edad");
+
+       */
+    //Conversion de tipos primitivos
+       /* var edad =Integer.parseInt("20");
+        System.out.println("edad =" + (edad + 1 ));
+        var valorPI = Double.parseDouble("3.1416");
+        System.out.println("valorPi = " + valorPI); */
+
+    //Pedir un valor
+       /* var entrada = new Scanner(System.in) ;
+       /* System.out.println("Digite su edad");
+        edad = Integer.parseInt( entrada.nextLine());
+        System.out.println("Entrada= " + edad);
+
+
+        */
+    //conversion de tipos primitivos en java parte 2
+        /*var edadTexto =String.valueOf(10);
+        System.out.println("edadTexto= " + edadTexto);
+
+        var fraseChar ="programadores".charAt(4);
+        System.out.println("fraseChar = " + fraseChar);
+        System.out.println("Digite un caracter: ");
+        System.out.println("Digite un caracter ");
+        fraseChar = entrada.nextLine().charAt(0);
+        System.out.println("fraseChar =" +fraseChar);
+
+       }
+    }
+         */
+//Operadores de asignacion
+
+    /* int num1 = 5, num2 = 4;
+
+     var solucion = num1 + num2;
+     System.out.println("Solucion de la suma = " + solucion);
+
+     solucion = num1 - num2;
+     System.out.println("Solucion de la resta =" + solucion);
+
+
+     solucion = num1 * num2;
+     System.out.println("Solucion de la multiplicacion =" + solucion);
+
+     solucion = num1 / num2;
+     System.out.println("Solucion de la division  =" + solucion);
+     var solucion2 = 3.4 / num2;
+     System.out.println("solucion2 resultado de la division = " + solucion2);
+
+     solucion = num1 % num2; // Guarda el residuo entero de la division
+     System.out.println("solucion =" + solucion);
+     if (num1 % 2 == 0)
+         System.out.println("Es un numero Par");
+     else
+         System.out.println("Es un numero Impar");
+
+
+     */
+    int varNum1 = 1 , varNum2 = 4;
+    int varNum3 = varNum1 + 6- varNum2;
+        System.out.println("varNum3 =" + varNum3);
+
+    varNum1 += 1;
+        System.out.println("varnum1= +" + varNum1);
+
+    //ejercicio
+    varNum2 -= 2;
+        System.out.println("varNum2 = " + varNum2);
+    varNum1 *= 5;
+        System.out.println("varNum1 = " + varNum1);
+    varNum3 /= 4;
+        System.out.println("varNum3 = " + varNum3);
+    varNum1 %= 6;
+        System.out.println("varNum1 = " + varNum1);
 
 
 
