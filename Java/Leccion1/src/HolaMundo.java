@@ -1,5 +1,7 @@
 //Import java.util.Scanner;
 
+//import sun.security.rsa.RSAUtil;
+
 import java.sql.SQLOutput;
 
 // Tu código aquí
@@ -41,6 +43,7 @@ public class HolaMundo {
         System.out.println(usuario + (a + b));
 
         //Ejercicio: Caracteres especiales con java
+
         var nombre = "Nati";
         System.out.println("\n Nueva Linea: \n" + nombre); //diagonal invera y letra n
         System.out.println("tabulador \t" + nombre); //tabulador un espacio para centrar
@@ -102,7 +105,7 @@ public class HolaMundo {
         System.out.println("El valor minimo de float : "+ Double.MIN_VALUE);
         System.out.println("El valor maximo de float : " +Double.MAX_VALUE);
 
-        */
+
 
 
 /*var numEntero = 20;
@@ -143,13 +146,19 @@ public class HolaMundo {
            System.out.println("Eres menor de edad");
 
        */
-    //Conversion de tipos primitivos
+
+        //Clase 7
+
+        //Conversion de tipos primitivos
+
+
        /* var edad =Integer.parseInt("20");
         System.out.println("edad =" + (edad + 1 ));
         var valorPI = Double.parseDouble("3.1416");
         System.out.println("valorPi = " + valorPI); */
 
-    //Pedir un valor
+        //Pedir un valor
+
        /* var entrada = new Scanner(System.in) ;
        /* System.out.println("Digite su edad");
         edad = Integer.parseInt( entrada.nextLine());
@@ -157,7 +166,7 @@ public class HolaMundo {
 
 
         */
-    //conversion de tipos primitivos en java parte 2
+        //conversion de tipos primitivos en java parte 2
         /*var edadTexto =String.valueOf(10);
         System.out.println("edadTexto= " + edadTexto);
 
@@ -199,7 +208,9 @@ public class HolaMundo {
 
 
      */
-    int varNum1 = 1 , varNum2 = 4;
+
+
+   /* int varNum1 = 1 , varNum2 = 4;
     int varNum3 = varNum1 + 6- varNum2;
         System.out.println("varNum3 =" + varNum3);
 
@@ -207,6 +218,7 @@ public class HolaMundo {
         System.out.println("varnum1= +" + varNum1);
 
     //ejercicio
+
     varNum2 -= 2;
         System.out.println("varNum2 = " + varNum2);
     varNum1 *= 5;
@@ -217,6 +229,151 @@ public class HolaMundo {
         System.out.println("varNum1 = " + varNum1);
 
 //Clase 8
+
+    }
+
+}
+    */
+//Cambio de signo , Operador unarios
+
+      /*  var varA = -7;
+        var varB = -varA;
+        System.out.println("varA = " + varA);
+        System.out.println("varB- " + varB);
+
+
+        //Operador de Negacion
+
+        var varC = true;
+        var varD = !varC;
+        System.out.println("varC = " + varC);
+        System.out.println("varD = " + varD);
+
+   // ++  = +1
+        //Operadores Unarios de incremento : Preincremento.
+        var varE = 9; //se va a modificar el valor
+        var varF = ++varE; //simbolo antes de la variable
+        //Primero se incrementa la variable y despues se usa su valor
+        System.out.println("varE = " + varE);
+        System.out.println("varF = " + varF);
+
+    var VarG = 3;
+    var varH = VarG++;
+        System.out.println();
+//Posdecremento
+ var varK = 8;
+ var varL= varK --;
+        System.out.println("varK - " + varK );
+        System.out.println("varL - " + varL);
+
+
+
+
+       */
+//Operadores de igualdad
+      /*  var aNum = 5;
+        var bNum = 4;
+        var cNum = (aNum == bNum);
+
+        System.out.println("cNum = " + cNum);
+
+
+        System.out.println("cNum = " + cNum);
+
+        var dNum = aNum != bNum;
+        System.out.println("dNum = " + dNum);
+
+        var CadenaA = "Hello";
+        var CadenaB = "bye bye";
+        var cVar = CadenaA == CadenaB;
+        System.out.println("cVar = " + cVar);
+        var fVar = CadenaA.equals(CadenaB);
+        System.out.println("fVar = " + fVar);
+
+
+//Operadores relacionales
+
+        var rVar = aNum >= bNum;
+        System.out.println("rVar = " + rVar);
+
+
+        var gVar = aNum != bNum;
+        System.out.println("gvar = " + gVar);
+
+        if (aNum % 2 == 0) {
+
+            System.out.println("El numero es Par");
+        } else{
+            System.out.println("El numero es Impar");
+        }
+
+     var edad = 30;
+        var adulro =18;
+        if (edad >= edad) {
+            System.out.println("Es nayor de edad");
+        }
+
+        else {
+            System.out.println("Es menor de edad");
+        }
+
+
+
+
+
+       */
+
+
+        //Operadores condicionales
+
+        var valorA = 7;
+        var valorMinimo= 0;
+        var valorMaximo = 10;
+        var respuesta = valorA >= valorMinimo && valorA <= valorMaximo;
+
+        if(respuesta) {
+            System.out.println("Esta dentro del rango establecido");
+        } else {
+            System.out.println("Esta fuera del rango establecido");
+
+        }
+
+
+        var vacaciones = false;
+        var diaLibre = false;
+        if(vacaciones || diaLibre) {
+            System.out.println("El papa puede asistir al juego de su hijo");
+        } else {
+            System.out.println("El papa no puede asisitir al juego de su hijo");
+        }
+
+ //Operador ternario
+
+
+// Operador Ternario
+        System.out.println("5 es Impar? " + (5 % 2 != 0 ? "Verdadero" : "Falso"));
+
+        var numero = 4;
+        System.out.println("4 es Par? " + (numero % 2 == 0 ? "Verdadero" : "Falso"));
+
+        var x = 5;
+        var y = 10;
+        var z = ++x + y--;
+
+        System.out.println("x = " + x); // 6
+        System.out.println("y = " + y); // 9
+        System.out.println("z = " + z); // 16
+
+        var solucionAritmetica = 4 + 5 * 6 / 3; // 4 + ((5 * 6) / 3) = 30 / 3 = 10 + 4 = 14
+        System.out.println("solucionAritmetica = " + solucionAritmetica);
+
+        solucionAritmetica = (4 + 5) * 6 / 3; // 4 + 5 = 9 * 6 = 54 / 3 = 18
+        System.out.println("solucionAritmetica = " + solucionAritmetica);
+
+
+
+
+
 
     }
 
