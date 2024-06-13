@@ -133,3 +133,106 @@ En ocasiones, la fusión puede generar conflictos que requieren intervención ma
 ---
 
 
+# Resolución de Conflictos al Hacer Merge en Git
+
+## Clase 10 - Miércoles 12 de Junio del 2024
+
+### Sección de Lectura
+
+Git es una herramienta muy robusta y tiene la capacidad de resolver muchos conflictos automáticamente. Sin embargo, hay casos en los que no puede hacerlo, especialmente cuando dos ramas distintas han realizado cambios en la misma línea de código. 
+
+#### Conceptos Clave:
+
+- **Merge y Checkout**: Cambiar de rama o fusionar ramas no borra ninguna rama o commit.
+- **Conflictos**: Ocurren cuando dos ramas diferentes realizan cambios distintos en la misma línea de código.
+- **Resolución de Conflictos**: Debe ser realizada manualmente en un editor de código, donde se elige qué cambios aceptar.
+- **Nuevo Commit**: Es necesario crear un nuevo commit para aplicar los cambios después de un merge.
+- **Estado Unmerged**: Archivos con conflictos entran en un estado intermedio conocido como Unmerged.
+- **Revertir un Merge**: Se puede cancelar un merge usando `git merge --abort`.
+
+#### Comandos para Repositorios Remotos:
+
+- `git clone`: Clona un repositorio remoto al directorio de trabajo local.
+- `git push`: Envía cambios al repositorio remoto.
+- `git fetch`: Actualiza el repositorio local con cambios del remoto.
+- `git pull`: Combina `git fetch` y `git merge` en un solo paso.
+- `git commit -am ""`: Combina `git add` y `git commit` en un solo comando.
+- `git branch`: Crea una nueva rama.
+- `git checkout`: Cambia de una rama a otra.
+- `git merge`: Fusiona cambios de una rama a otra. Esto ocurre en la rama en la que estás posicionado.
+- Los merges pueden generar conflictos que necesitan ser resueltos manualmente.
+
+### Sección Práctica
+
+#### Pasos para Crear y Resolver un Conflicto:
+
+1. **Cambios en la Rama `segunda`:**
+   - Posicionarse en la rama `segunda`:
+     ```bash
+     git checkout segunda
+     ```
+   - Realizar cambios en un archivo HTML y CSS.
+   - Guardar los cambios:
+     ```bash
+     # Ctrl + S (Guardar en el editor de texto)
+     ```
+   - Hacer commit de los cambios:
+     ```bash
+     git commit -am "Modifiqué el CSS y el color del texto"
+     ```
+
+2. **Cambios en la Rama `master`:**
+   - Cambiar a la rama `master`:
+     ```bash
+     git checkout master
+     ```
+   - Realizar otros cambios en los mismos archivos HTML y CSS.
+   - Guardar los cambios:
+     ```bash
+     # Ctrl + S (Guardar en el editor de texto)
+     ```
+   - Hacer commit de los cambios:
+     ```bash
+     git commit -am "Agregué suscripción, cambié el código y puse todo azul en CSS"
+     ```
+
+3. **Fusión de Ramas y Resolución de Conflictos:**
+   - Fusionar la rama `segunda` en `master`:
+     ```bash
+     git merge segunda
+     ```
+   - En caso de conflicto, abrir el archivo en el editor de texto y resolver los conflictos indicados. Esto se puede hacer desde Visual Studio Code seleccionando: el cambio entrante.
+   - Después de resolver el conflicto, guardar el archivo:
+     ```bash
+     # Ctrl + S (Guardar en el editor de texto)
+     ```
+   - Comprobar el estado de los archivos:
+     ```bash
+     git status
+     ```
+   - Hacer commit de la solución del conflicto:
+     ```bash
+     git commit -am "Solución de conflictos al fusionar las ramas"
+     ```
+
+4. **Actualizar la Rama `segunda` con los Cambios Resueltos:**
+   - Cambiar a la rama `segunda`:
+     ```bash
+     git checkout segunda
+     ```
+   - Fusionar los cambios de `master` en `segunda`:
+     ```bash
+     git merge master
+     ```
+
+### Notas Adicionales:
+
+- Recuerda que la fusión (`merge`) siempre ocurre en la rama en la que estás posicionado.
+- Visual Studio Code facilita la resolución de conflictos con herramientas de interfaz gráfica.
+- Asegúrate de siempre hacer commit después de resolver conflictos para mantener la integridad del historial de cambios.
+
+Este proceso asegura que los cambios en ambas ramas se combinen de manera efectiva, resolviendo cualquier conflicto que surja.
+
+---
+
+¡Buena suerte con tu manejo de conflictos en Git!
