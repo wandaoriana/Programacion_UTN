@@ -1,0 +1,181 @@
+:root {
+    --body-bg-color:#ebd4d4 ;
+    --text-color: #F08080;
+    --colorh1-color:#B22222;
+}
+body {
+    display: flex; /*Agregado en clase cuatro*/
+    flex-direction: column; /*Agregado en clase cuatro*/
+    background: var(--body-bg-color);
+    color: var(--text-color);
+    font-family: "Raleway", sans-serif;
+}
+/*Definimos el color de los titulos*/
+h1 {
+    color: #CD5C5C;
+    font-family: "Playwrite NG Modern", cursive;
+
+}
+
+h2 {
+    
+    font-size:larger;
+    color: #B22222;
+    font-family: "Raleway", sans-serif;
+}
+
+
+h3 {
+    
+    color: #f5d0d0;
+   
+}
+
+h4{
+    font-family: "Playfair Display", serif;
+color: #CD5C5C;
+}
+
+/*Titulo del header*/
+.titulo{
+    display: flex;
+    margin: 3rem;
+}
+
+h5{
+    font-family: "Playfair Display", serif;
+color: #f9caca;
+}
+h6 {
+    
+    color: #8B0000; 
+   
+    font-family: "Playwrite NO", cursive;
+    font-size:xx-large}
+/*Titulo del header*/
+.titulo{
+    display: flex;
+    margin: 3rem;
+}
+/*Barra de navegacion*/
+.navigation {
+    display: flex; /*Utiliza felxbox para organizar los elementos hijos (items de navegacion) en una fila flexible*/
+    gap: 3rem; /*Establece un espacio de 3 rem entre cada elemento hijo dentro del contenedor flex*/
+    list-style: none; /*Elimina los puntos de lista predeterminado de los elementos de la lista*/
+    justify-content: flex-end; /*Alinea los elementos hijos al final del contenedor flex, a la derecha. */
+    margin: 0 3rem; /*Establece un margen de 0 en la parte superior e inferior y de 3 rem en los lados iz<quierdo y derecho */
+}
+
+/*Enlaces de la barra de navegacion configurados como si fueran botones*/
+.navigation li {
+    font-size: 1rem;
+    width: 100px;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background: #f0eaea1a;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+/*Estilo de los enlaces de la barra de navegacio*/
+a{
+    text-decoration: none; /*Elimina el subrayado predeterminado de los enlaces*/
+    color: #CD5C5C; /*Establece el color del texto de los enlaces a negro*/
+}
+
+/*Todo lo que contiene el main*/
+.main-container{
+    display: flex;
+    flex-direction: column;
+}
+
+/*Medias query agrupadas*/
+/* Celular (Pantalla pequeña, hasta 767px) */
+/* Creamos una media query*/
+@media (max-width: 767px) {
+    .titulo{
+        justify-content: center;
+    }
+    .navigation {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+}    
+/*Tableta (Pantalla medianas, entre 768px y 1023px*/
+@media (min-width: 768px) and (max-width: 1023px) {
+    .titulo {
+        justify-content: center;
+    }
+    .navigation {
+        gap: 2rem;
+        justify-content: center;
+    }
+}
+
+/* Escritorio (Pantallas anchas, 1024 y superiores) */
+@media (min-width: 1024px) {
+    .titulo {
+        justify-content: flex-start;
+    }
+    .navigation {
+        gap: 3rem;
+        justify-content:  flex-end;
+        margin: 0 3rem;
+    }
+}
+
+
+.raleway-<uniquifier> {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
+
+  .playwrite-ng-modern-<uniquifier> {
+    font-family: "Playwrite NG Modern", cursive;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+
+
+  }
+  .logo_lenguajes {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+   
+    
+}
+
+
+.lenguajes_aprendidos {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+   
+
+}
+
+
+
+.playfair-display-<uniquifier> {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
+
+  .playwrite-no-<uniquifier> {
+    font-family: "Playwrite NO", cursive;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
+  
