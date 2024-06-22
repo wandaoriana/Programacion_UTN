@@ -271,3 +271,53 @@ Los archivos en conflicto durante un `git merge` entran en un estado llamado Unm
 1. Ejecuta `git add` para mover los archivos al área de staging.
 2. Ejecuta `git commit` para
 
+# Cómo Funcionan las Llaves Públicas y Privadas en Cifrado Asimétrico
+
+## Clase 12 - Miércoles, 19 de Junio del 2024
+
+### Portafolio 6
+
+---
+
+## Sección de Lectura
+
+### Introducción al Cifrado Asimétrico
+
+Las llaves públicas y privadas, también conocidas como cifrado asimétrico, son fundamentales para mantener la privacidad y seguridad en la comunicación entre diferentes nodos. Este tipo de cifrado permite enviar mensajes de manera segura asegurando que solo el destinatario deseado pueda leer el contenido.
+
+### Funcionamiento del Cifrado con Llaves Públicas y Privadas
+
+1. **Generación de Llaves**:
+   - Cada persona debe crear un par de llaves: una llave pública y una llave privada.
+   
+2. **Compartir la Llave Pública**:
+   - La llave pública puede ser compartida libremente con cualquier persona o entidad. No hay riesgo si esta llave es interceptada ya que no puede descifrar mensajes por sí sola.
+
+3. **Cifrado del Mensaje**:
+   - Cuando una persona desea enviar un mensaje seguro, utiliza la llave pública del destinatario para cifrar el mensaje. Este mensaje cifrado solo puede ser descifrado por la llave privada correspondiente del destinatario.
+
+4. **Envío Seguro del Mensaje**:
+   - El mensaje cifrado puede ser enviado a través de cualquier canal. Incluso si el mensaje es interceptado, no puede ser leído sin la llave privada correcta.
+
+5. **Descifrado del Mensaje**:
+   - El destinatario utiliza su llave privada para descifrar el mensaje y acceder al contenido original.
+
+### Importancia de Mantener Segura la Llave Privada
+
+- **Llave Pública**:
+  - Es segura para compartir y puede ser vista por cualquiera. Su principal función es cifrar el mensaje que solo la llave privada correspondiente puede descifrar.
+
+- **Llave Privada**:
+  - Debe mantenerse completamente segura y nunca ser compartida. Esta llave es la única que puede descifrar mensajes cifrados con su llave pública correspondiente.
+
+### Nota Importante
+
+- **Compartir Llave Pública**:
+  - Puedes compartir tu llave pública con cualquier persona sin preocuparte por la seguridad.
+
+- **Seguridad de la Llave Privada**:
+  - Nunca compartas tu llave privada con nadie. Mantén esta llave en un lugar seguro para asegurarte de que solo tú puedas descifrar los mensajes cifrados dirigidos a ti.
+
+---
+
+Este `README.md` te proporciona una comprensión básica de cómo funcionan las llaves públicas y privadas en el cifrado asimétrico y cómo se utilizan para mantener la seguridad en la comunicación.
