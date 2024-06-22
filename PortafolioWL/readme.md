@@ -236,3 +236,38 @@ Este proceso asegura que los cambios en ambas ramas se combinen de manera efecti
 ---
 
 ¡Buena suerte con tu manejo de conflictos en Git!
+# Resolución de Conflictos al Hacer Merge en Git
+
+## Clase 11 - Miércoles, 12 de Junio del 2024
+
+### Portafolio 5
+
+---
+
+## Sección de Lectura
+
+
+Git es una herramienta que no borra nada a menos que se lo indiquemos. Comandos como `git merge` o `git checkout` no eliminan ramas ni commits; simplemente cambian de rama o crean un nuevo commit. Recuerda que puedes borrar commits con `git reset` y ramas con `git branch -d`.
+
+### Resolución Automática de Conflictos
+
+Git puede resolver automáticamente algunos conflictos, como cambios en líneas diferentes. Sin embargo, cuando dos ramas modifican la misma línea de manera diferente, Git no sabe cómo resolver el conflicto. Estos conflictos se deben resolver manualmente editando el archivo en cuestión.
+
+### Manejo de Conflictos
+
+1. Realiza el merge.
+2. Abre el archivo en conflicto en tu editor de código.
+3. Decide si deseas mantener una de las versiones o combinar ambas.
+4. Guarda el archivo.
+
+Visual Studio Code y otros editores ofrecen herramientas para resolver estos conflictos sin necesidad de editar manualmente el texto. Simplemente selecciona las opciones deseadas y guarda el archivo.
+
+Recuerda siempre crear un nuevo commit después de resolver los conflictos de un merge. Si Git resuelve automáticamente el conflicto, hará el commit por ti. Si no, debes solucionarlo y luego hacer el commit manualmente.
+
+### Estado Unmerged
+
+Los archivos en conflicto durante un `git merge` entran en un estado llamado Unmerged, similar al estado Unstaged, que es un estado intermedio entre Untracked y Unstaged. Para resolver esto:
+
+1. Ejecuta `git add` para mover los archivos al área de staging.
+2. Ejecuta `git commit` para
+
