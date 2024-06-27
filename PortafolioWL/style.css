@@ -178,4 +178,56 @@ a{
     font-weight: <weight>;
     font-style: normal;
   }
-  
+  /* Estilos generales para el footer */
+footer {
+    background-color: #ebd4d4 ; /* Fondo del footer en color gris oscuro */
+    color: #f27878; /* Texto en color blanco */
+    padding: 20px 0; /* Espaciado interno arriba y abajo */
+    text-align: center; /* Centrar el texto */
+}
+
+/* Contenedor principal del footer */
+.footer-container {
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
+    display: flex; /* Usar flexbox para el layout */
+    flex-direction: column; /* Colocar los elementos en una columna */
+    align-items: center; /* Centrar los elementos horizontalmente */
+}
+
+/* Estilos para la sección de información del footer */
+.footer-container{
+    margin-bottom: 10px; /* Espacio debajo de la información */
+}
+
+/* Estilos para la sección de enlaces a redes sociales */
+.footer-container {
+    display: flex; /* Usar flexbox para los iconos de redes sociales */
+    justify-content: center; /* Centrar los iconos horizontalmente */
+    gap: 15px; /* Espacio entre los iconos */
+}
+/* Estilos para la caja de enlace de redes sociales */
+.footer-container a {
+    display: inline-flex; /* Usar flexbox para centrar el contenido dentro del enlace */
+    position: static; /* El enlace no se mueve al hacer scroll */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    width: 40px; /* Ancho del botón */
+    height: 40px; /* Alto del botón */
+    background-color: #ebd4d4 ; /* Fondo del botón en color gris medio */
+    border-radius: 50%; /* Hacer los bordes circulares */
+    text-decoration: none; /* Quitar el subrayado del texto por defecto */
+}
+
+/* Estilos para los colores de fondo de botones al hacer hover con el cursor sobre ellos */
+.footer-container a:hover {
+    background-color: #8d5252; /* Cambiar el fondo a gris claro al pasar el cursor sobre él */
+}
+
+/* Estilos para los iconos SVG dentro de los enlaces */
+.footer-container svg {
+    fill: #a33d3d; /* Color del icono en blanco */
+    width: 24px; /* Ancho del icono */
+    height: 24px; /* Altura del icono */
+}
+
