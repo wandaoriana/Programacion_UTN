@@ -321,3 +321,71 @@ Las llaves públicas y privadas, también conocidas como cifrado asimétrico, so
 ---
 
 Este `README.md` te proporciona una comprensión básica de cómo funcionan las llaves públicas y privadas en el cifrado asimétrico y cómo se utilizan para mantener la seguridad en la comunicación.
+
+# Clase 13 - Miércoles 26 de junio de 2024 - Portafolio 7
+
+## Configura tus llaves SSH en local (Parte 13)
+
+Si usamos GitHub solo con usuario y contraseña, corremos el riesgo de perder todo si nuestra PC se extravía o es comprometida. Para fortalecer la seguridad, es recomendable utilizar llaves públicas y privadas. Esto no solo mejora la seguridad, sino que también evita tener que ingresar usuario y contraseña cada vez.
+
+A continuación, se describen los pasos para configurar tus llaves SSH en local:
+
+1. Abre Git Bash (en Windows) o la terminal (en Ubuntu) en cualquier ubicación.
+
+2. Verifica tu configuración de Git con el comando:
+
+git config -l
+
+
+3. Actualiza el correo que usas en GitHub con:
+
+git config --global user.email “alumnos@mail.com”
+
+
+4. Genera tus llaves SSH con el siguiente comando:
+
+ssh-keygen -t rsa -b 4096 -C “alumnos@mail.com”
+
+
+5. Enciende el servidor de llaves SSH con:
+
+eval $(ssh-agent -s)
+
+
+6. Añade tu llave SSH al servidor con:
+
+ssh-add ~/.ssh/id_ga35745
+
+(Reemplaza `id_ga35745` con el nombre de tu llave privada).
+Si usas una Mac, sigue estos pasos para configurar tus llaves SSH:
+
+7. Abre la terminal y ejecuta el siguiente comando para encender el “servidor” de llaves SSH:
+
+eval “$(ssh-agent -s)”
+
+
+8. Si estás usando una versión de OSX superior a Mac Sierra (v10.12), crea o modifica un archivo llamado “config” en la carpeta de tu usuario con el siguiente contenido (cuidado con las mayúsculas):
+
+vim config
+
+Agrega lo siguiente al archivo:
+
+Host * AddKeysToAgent yes UseKeychain yes IdentityFile ruta-donde-guardaste-tu-llave-privada
+
+
+9. Añade tu llave SSH al “servidor” de llaves SSH de tu computadora (en caso de error, ejecuta este mismo comando sin el argumento -K):
+
+ssh-add -K ruta-donde-guardaste-tu-llave-privada
+
+
+## Segundo Factor de Autenticación (2FA)
+
+Para mejorar la seguridad, considera habilitar el 2FA:
+1. Ve a tu perfil en GitHub.
+2. Selecciona "Settings".
+3. Navega a "Password and Authentication".
+4. Activa el 2FA:
+- GitHub Mobile: Instala la aplicación GitHub Mobile y sigue las instrucciones.
+- Authenticator app: Escanea el código QR con una app como Twilio Authy Authenticator.
+
+Recuerda guardar tus datos de acceso en un lugar seguro para mantener el acceso incluso si cambias de dispositivo.
