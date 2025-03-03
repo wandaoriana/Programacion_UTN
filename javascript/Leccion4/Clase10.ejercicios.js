@@ -61,3 +61,5 @@ switch (mes) {
 }
 
 console.log("Bienvenido a la estación de: " + estacion);
+
+console.log('prueba');
